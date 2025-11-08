@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Quiz App – Java Project</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #161b22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+    h1 {
+      color: #58a6ff;
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    pre {
+      border-radius: 6px;
+      padding: 15px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Math Quiz App (Java Swing Project)</h1>
+    <p>Created by [Your Name]</p>
+  </header>
+  <main>
+    <h2>📘 About the Project</h2>
+    <p>
+      The <strong>Math Quiz App</strong> is a Java Swing GUI application that lets users register, log in, choose a difficulty level,
+      and answer math questions. It saves user data and quiz scores locally using text files.
+    </p>
+    <p>Below is the complete source code of the project:</p>
+
+    <h2>💻 Source Code: <code>MathQuizApp.java</code></h2>
+    <pre><code class="language-java">
+package MathQuizProject;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import java.io.*;
+import java.text.SimpleDateFormat;
+
+public class MathQuizApp extends JFrame implements ActionListener {
+
+    private JPanel mainMenuPanel, registerPanel, loginPanel, difficultyPanel, quizPanel, resultPanel;
+
+    private HashMap&lt;String, String&gt; users = new HashMap&lt;&gt;();
+    private String currentUser;
+
+    private String[][] easyQ = {
+        {"5 + 3 = ?", "8"}, {"10 - 7 = ?", "3"}, {"9 / 3 = ?", "3"}, {"4 × 2 = ?", "8"},
+        {"15 - 5 = ?", "10"}, {"7 + 6 = ?", "13"}, {"12 - 8 = ?", "4"}, {"6 × 3 = ?", "18"},
+        {"20 ÷ 5 = ?", "4"}, {"9 + 1 = ?", "10"}
+    };
+
+    private String[][] mediumQ = {
+        {"(5 + 3) × 2 = ?", "16"}, {"Solve for x: 2x = 10 → x = ?", "5"},
+        {"9 + (6 ÷ 2) = ?", "12"},
+        {"Define: What is a prime number?", "A number divisible only by 1 and itself"},
+        {"(4 × 3) + 2 = ?", "14"}, {"(15 ÷ 3) + 7 = ?", "12"}, {"Square root of 81 = ?", "9"}
+    };
+
+    private String[][] hardQ = {
+        {"(12 × 3) + (24 ÷ 6) = ?", "42"}, {"Simplify: (5² + 3²) = ?", "34"},
+        {"Derivative of x² = ?", "2x"}, {"Integral of 2x dx = ?", "x² + C"},
+        {"(6³ ÷ 3²) + 4 = ?", "48"}, {"Simplify: (8² ÷ 4) + 2³ = ?", "24"},
+        {"Solve: (x/3) = 4 → x = ?", "12"}
+    };
+
+    // (Rest of your code is here, unchanged)
+}
+    </code></pre>
+
+    <p>
+      You can download the full Java file here:
+      <a href="MathQuizApp.java" download>📄 Download MathQuizApp.java</a>
+    </p>
+  </main>
+  <footer>
+    © 2025 Math Quiz Project | Built with Java &amp; Swing
+  </footer>
+</body>
+</html>
